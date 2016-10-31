@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="81" id="hRT-3I-7gh" customClass="CQ_PayTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="312" height="81"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hRT-3I-7gh" id="aOs-zs-l5u">
+                <rect key="frame" x="0.0" y="0.0" width="312" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="v2_my_coupon_icon" translatesAutoresizingMaskIntoConstraints="NO" id="VMR-nw-bqv">
+                        <rect key="frame" x="14" y="25" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="4FU-OH-D9v"/>
+                            <constraint firstAttribute="width" constant="30" id="TCu-M1-cEx"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1张优惠券" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZS-Nu-nEe">
+                        <rect key="frame" x="52" y="32" width="60" height="16"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbH-M0-xAZ">
+                        <rect key="frame" x="282" y="29" width="22" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="22" id="9bK-2r-eru"/>
+                            <constraint firstAttribute="height" constant="21" id="HuW-oX-HeX"/>
+                        </constraints>
+                        <state key="normal" image="shoppingnormal"/>
+                        <state key="selected" image="v2_selected"/>
+                        <state key="highlighted" image="v2_selected"/>
+                        <connections>
+                            <action selector="pay:" destination="hRT-3I-7gh" eventType="touchUpInside" id="gwe-bF-FNh"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="mbH-M0-xAZ" secondAttribute="trailing" constant="8" id="3cd-me-GHc"/>
+                    <constraint firstItem="DZS-Nu-nEe" firstAttribute="leading" secondItem="VMR-nw-bqv" secondAttribute="trailing" constant="8" id="5xE-2Y-7a3"/>
+                    <constraint firstItem="VMR-nw-bqv" firstAttribute="leading" secondItem="aOs-zs-l5u" secondAttribute="leading" constant="14" id="H5i-I1-k3Z"/>
+                    <constraint firstItem="mbH-M0-xAZ" firstAttribute="centerY" secondItem="aOs-zs-l5u" secondAttribute="centerY" id="Naq-pL-RqR"/>
+                    <constraint firstItem="DZS-Nu-nEe" firstAttribute="centerY" secondItem="aOs-zs-l5u" secondAttribute="centerY" id="Scz-4Z-ryI"/>
+                    <constraint firstItem="VMR-nw-bqv" firstAttribute="centerY" secondItem="aOs-zs-l5u" secondAttribute="centerY" id="Yzt-nc-xTV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="payButton" destination="mbH-M0-xAZ" id="XRx-aa-Yb0"/>
+                <outlet property="payImageView" destination="VMR-nw-bqv" id="mfJ-64-MJ2"/>
+                <outlet property="payNameLabel" destination="DZS-Nu-nEe" id="d74-92-wqi"/>
+            </connections>
+            <point key="canvasLocation" x="338" y="5.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="shoppingnormal" width="33" height="33"/>
+        <image name="v2_my_coupon_icon" width="32" height="22"/>
+        <image name="v2_selected" width="16" height="16"/>
+    </resources>
+</document>

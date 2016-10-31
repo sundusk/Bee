@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="81" id="0tc-3p-cPQ" customClass="CQ_DiscountTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="312" height="81"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0tc-3p-cPQ" id="7G7-Ll-Lty">
+                <rect key="frame" x="0.0" y="0.0" width="312" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="v2_my_coupon_icon" translatesAutoresizingMaskIntoConstraints="NO" id="gh8-yl-Ss1">
+                        <rect key="frame" x="8" y="25" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="Cxh-no-CE8"/>
+                            <constraint firstAttribute="width" constant="30" id="oFv-1a-nz8"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1张优惠券" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIB-zg-q4d">
+                        <rect key="frame" x="46" y="32" width="60" height="16"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                        <color key="textColor" red="1" green="0.13240898070000001" blue="0.2581940949" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxn-p2-mdl">
+                        <rect key="frame" x="292" y="29" width="20" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="34E-7E-adW"/>
+                            <constraint firstAttribute="height" constant="22" id="tIN-lN-0ah"/>
+                        </constraints>
+                        <state key="normal" image="icon_go"/>
+                        <connections>
+                            <action selector="discount:" destination="0tc-3p-cPQ" eventType="touchUpInside" id="CpF-du-XOr"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查看" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRe-te-WIQ">
+                        <rect key="frame" x="261" y="30" width="29" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="29" id="kj6-5i-ADS"/>
+                            <constraint firstAttribute="height" constant="21" id="utF-kz-bZd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="wIB-zg-q4d" firstAttribute="leading" secondItem="gh8-yl-Ss1" secondAttribute="trailing" constant="8" id="0U1-cI-2uC"/>
+                    <constraint firstItem="gh8-yl-Ss1" firstAttribute="leading" secondItem="7G7-Ll-Lty" secondAttribute="leading" constant="8" id="43M-iy-fgw"/>
+                    <constraint firstItem="gRe-te-WIQ" firstAttribute="centerY" secondItem="7G7-Ll-Lty" secondAttribute="centerY" id="8Sj-YH-bb6"/>
+                    <constraint firstItem="bxn-p2-mdl" firstAttribute="leading" secondItem="gRe-te-WIQ" secondAttribute="trailing" constant="2" id="GUG-Jt-Ndh"/>
+                    <constraint firstItem="bxn-p2-mdl" firstAttribute="centerY" secondItem="7G7-Ll-Lty" secondAttribute="centerY" id="PFZ-2C-fMd"/>
+                    <constraint firstAttribute="trailing" secondItem="bxn-p2-mdl" secondAttribute="trailing" id="Rs5-de-9qm"/>
+                    <constraint firstItem="wIB-zg-q4d" firstAttribute="centerY" secondItem="7G7-Ll-Lty" secondAttribute="centerY" id="qCh-Ye-O43"/>
+                    <constraint firstItem="gh8-yl-Ss1" firstAttribute="centerY" secondItem="7G7-Ll-Lty" secondAttribute="centerY" id="zoj-Oz-jDy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lookButton" destination="bxn-p2-mdl" id="Nmf-6a-Xzm"/>
+            </connections>
+            <point key="canvasLocation" x="523" y="166.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_go" width="5" height="10"/>
+        <image name="v2_my_coupon_icon" width="32" height="22"/>
+    </resources>
+</document>

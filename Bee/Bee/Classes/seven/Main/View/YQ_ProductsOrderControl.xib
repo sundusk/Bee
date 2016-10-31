@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Ra4-bM-xoq" customClass="YQ_ProductsOrderControl">
+            <rect key="frame" x="0.0" y="0.0" width="96" height="27"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOq-a3-Pqp">
+                    <rect key="frame" x="0.0" y="0.0" width="27" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="27" id="9iS-9u-IGM"/>
+                        <constraint firstAttribute="width" constant="27" id="lX3-sB-228"/>
+                    </constraints>
+                    <state key="normal" image="v2_reduce"/>
+                    <connections>
+                        <action selector="reduceButtonClick:" destination="Ra4-bM-xoq" eventType="touchUpInside" id="uSe-L4-FVu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oz0-hs-43w">
+                    <rect key="frame" x="59" y="0.0" width="27" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="27" id="QW1-6U-tdO"/>
+                        <constraint firstAttribute="width" constant="27" id="ZQL-Yt-uis"/>
+                    </constraints>
+                    <state key="normal" image="v2_increase"/>
+                    <connections>
+                        <action selector="increaseButtonClick:" destination="Ra4-bM-xoq" eventType="touchUpInside" id="gY6-H5-VHe"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XwQ-uj-asg">
+                    <rect key="frame" x="27" y="6" width="32" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="OOq-a3-Pqp" firstAttribute="leading" secondItem="Ra4-bM-xoq" secondAttribute="leading" id="A9h-Je-W7Z"/>
+                <constraint firstAttribute="trailing" secondItem="Oz0-hs-43w" secondAttribute="trailing" constant="10" id="NIL-wN-O44"/>
+                <constraint firstItem="Oz0-hs-43w" firstAttribute="centerY" secondItem="Ra4-bM-xoq" secondAttribute="centerY" id="OHR-Ni-0ar"/>
+                <constraint firstItem="Oz0-hs-43w" firstAttribute="centerY" secondItem="XwQ-uj-asg" secondAttribute="centerY" id="QK1-11-9dY"/>
+                <constraint firstItem="OOq-a3-Pqp" firstAttribute="centerY" secondItem="Ra4-bM-xoq" secondAttribute="centerY" id="SwH-hz-dUC"/>
+                <constraint firstItem="Oz0-hs-43w" firstAttribute="leading" secondItem="XwQ-uj-asg" secondAttribute="trailing" id="Y4K-AB-552"/>
+                <constraint firstItem="XwQ-uj-asg" firstAttribute="leading" secondItem="OOq-a3-Pqp" secondAttribute="trailing" id="oh1-pX-JyT"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="numberLabel" destination="XwQ-uj-asg" id="Ay2-LF-SrT"/>
+                <outlet property="reduceButton" destination="OOq-a3-Pqp" id="TKd-4Y-rxx"/>
+            </connections>
+            <point key="canvasLocation" x="19" y="0.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="v2_increase" width="27" height="27"/>
+        <image name="v2_reduce" width="27" height="27"/>
+    </resources>
+</document>
